@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colégio Abílio Carneiro - Dashboard</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src="imagens/logo.jpg" alt="Logo Colégio Estadual Abílio Carneiro" class="logo" />
+        <div class="school-name">
+          <h1>Colégio Abílio Carneiro</h1>
+          <p>Clevelândia - Paraná</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="active">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+           <li><a href="cadastro.html" class="active">Pré-Matrícula</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER SLIDESHOW -->
+  <section id="inicio" class="banner">
+    <div class="slides active">
+      <img src="imagens/profs.jpeg" alt="Alunos em sala de aula" />
+      <div class="slide_text">
+        <h2>Formando o Futuro em Clevelândia</h2>
+        <p>Professores e diretores</p>
+      </div>
+    </div>
+    <div class="slides">
+      <img src="imagens/imagem2.jpeg" alt="Evento escolar" />
+      <div class="slide_text">
+        <h2>Evento de aniversario</h2>
+        <p>comemorando</p>
+      </div>
+    </div>
+    <div class="slides">
+      <img src="imagens/campeos alunos.jpeg" alt="Desfile cívico" />
+      <div class="slide_text">
+        <h2>evento de atletismo</h2>
+        <p>Podio de corrida de atletismo</p>
+      </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="dots-container" style="text-align:center">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="container">
+    <h2 class="section-title">Sobre o Colégio</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          O Colégio Estadual Abílio Carneiro oferece ensino médio e
+          profissionalizante, com foco na formação integral dos alunos.
+          Buscamos incentivar a cidadania, o pensamento crítico e a
+          participação social.
+        </p>
+        <p>
+          A escola valoriza a inclusão, a diversidade e promove atividades
+          culturais, esportivas e tecnológicas para um aprendizado dinâmico e
+          significativo.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="imagens/hum.png" alt="Paisagem do colégio Abílio Carneiro" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="container">
+    <h2 class="section-title">Conheça Nossos Cursos</h2>
+    <div class="courses-container">
+      <div class="course-card">
+        <div class="course-icon">📚</div>
+        <h3>Ensino Médio</h3>
+        <p>Formação básica com foco acadêmico e preparação para vestibulares.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📚</div>
+        <h3>EJA</h3>
+        <p>Educação de jovens e adultos que funciona de forma EAD, 80% à distância e 20% presencial .</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">⚙️</div>
+        <h3>Ensino fundamental</h3>
+        <p> é dividido em duas etapas, séries iniciais (1° ao 5° ano) e séries finais (6° ao 9° ano) </p>
+      </div>
+      <div class="course-card highlight">
+        <div class="course-icon">💻</div>
+        <h3>Informática</h3>
+        <p>curso profissionalizante na area de desenvolvimento de sistemas, tendo como os principais conteudos; banco de dados, desenvolvimento web e infraestrutura de redes.</p>
+        <p class="course-highlight">Destaque!</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🏃🏻</div>
+        <h3>Esportes</h3>
+        <p>Capacitação para o mercado de trabalho...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO INSTITUCIONAL -->
+  <section id="video" class="container" style="text-align: center; margin-top: 40px;">
+    <h2 class="section-title">Desfile de 7 de Setembro</h2>
+    <div
+      style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+      <iframe src="https://www.youtube.com/embed/wqFIxuRXvjs" title="Vídeo do Colégio Abílio Carneiro"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+
+  <!-- GALERIA -->
+  <section id="galeria" class="container">
+    <h2 class="section-title">Galeria de Fotos</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="imagens/2c.jpeg" alt="Atividade de laboratório" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/fundamental.jpeg" alt="Aula prática" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/ganhando o mundo.jpeg" alt="Evento cultural" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/aluno no pc.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/2 c estudando.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/2 c lab.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/alunos lab ciencia.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/imagem3.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/fundamental.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/profs.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/capeoes.jpeg" alt="Desfile cívico" />
+      </div>
+      <div class="gallery-item">
+        <img src="imagens/xadrez.jpeg" alt="Desfile cívico" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="container">
+    <h2 class="section-title">Projetos do Colégio</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Projeto Ambiental</h3>
+        <p>Iniciativa para conscientização e ações de sustentabilidade.</p>
+        <div class="project-tech">
+          <span>Meio Ambiente</span><span>Reciclagem</span><span>Educação</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Robótica Educacional</h3>
+        <p>Desenvolvimento de habilidades tecnológicas e programação.</p>
+        <div class="project-tech">
+          <span>Robótica</span><span>Programação</span><span>Ciência</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Feira de Ciências</h3>
+        <p>Apresentação de trabalhos científicos e experimentos.</p>
+        <div class="project-tech">
+          <span>Ciência</span><span>Pesquisa</span><span>Inovação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <h3>Contato</h3>
+    <p>Endereço: 643 R. Barão do Rio Branco,Clevelândia - PR</p>
+    <p>Telefone: (46) 99935-4575</p>
+    <p>Email: cldabiliocarneiro@seed.pr.gov.br</p>
+
+    <!-- Redes Sociais -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/abiliocarneiro643?igsh=MTNsdHlraWJjcnl6NQ==" target="_blank"
+        aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"
+          width="30" />
+      </a>
+      <a href="https://www.facebook.com/seu_perfil" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" width="30" />
+      </a>
+    </div>
+
+    <!-- Mapa do Google -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8345171953136!2d-52.3519549!3d-26.4022311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e51790da2dbc09%3A0xbe60c8e4ef5c55da!2sAbilio%20Carneiro%2C%20C%20E-Ef%20M%20Profis!5e0!3m2!1spt-BR!2sbr!4v1716391128379!5m2!1spt-BR!2sbr"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Modal da Imagem -->
+    <div id="modalImagem" class="modal">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <img class="modal-conteudo" id="imagemExpandida">
+      <div id="descricaoImagem"></div>
+    </div>
+
+
+
+
+    <!-- <div class="footer-credits">
+      Desenvolvido por <strong>Equipe do Colégio Abílio Carneiro</strong>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Colégio Abílio Carneiro - Todos os direitos reservados.
+    </div>
+  </footer> -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

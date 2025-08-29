@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        /* Estilos específicos para a página de pré-matrícula */
+        .registration-form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .form-section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+        }
+
+        .form-section h3 {
+            font-size: 1.5em;
+            color: #000000;
+            border-bottom: 2px solid #fffbfb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #000000;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #790000;
+        }
+
+        .form-group .half-width {
+            width: calc(50% - 10px);
+            display: inline-block;
+        }
+
+        .form-group .half-width:first-child {
+            margin-right: 20px;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-submit {
+           background: #000203;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .btn-submit:hover {
+            background-color: #004d40;
+        }
+
+        .form-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+        }
+
+        .form-message.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+
+        @media (max-width: 768px) {
+            .form-group .half-width {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="imagens/logo.jpg" alt="Logo Colégio Estadual Abílio Carneiro" class="logo" />
+                <div class="school-name">
+                    <h1>Colégio Abílio Carneiro</h1>
+                    <p>Clevelândia - Paraná</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">voltar ao topo</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#cursos">Cursos</a></li>
+                    <li><a href="index.html#galeria">Galeria</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" class="active">Pré-Matrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration-form-container">
+            <h2>Pré-Matrícula</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Preencha o formulário abaixo para iniciar o processo de pré-matrícula. Seus dados serão analisados e entraremos em contato para as próximas etapas.</p>
+            <form id="preMatriculaForm">
+
+                <div class="form-section">
+                    <h3>Dados do Aluno</h3>
+                    <div class="form-group">
+                        <label for="nomeAluno">Nome Completo</label>
+                        <input type="text" id="nomeAluno" name="nomeAluno" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="serieMatricula">Série/Ano que deseja se matricular</label>
+                        <select id="serieMatricula" name="serieMatricula" required>
+                            <option value="">Selecione a série</option>
+                            <option value="1ano_ensino_medio">6° Ano do Ensino fundamental</option>
+                            <option value="2ano_ensino_medio">7º Ano do Ensino fundamental</option>
+                            <option value="3ano_ensino_medio">8º Ano do Ensino fundamental</option>
+                            <option value="eja">9º Ano do Ensino fundamental</option>
+                            <option value="informatica">Curso de Informática</option>
+                            <option value="1ano_ensino_medio">1º Ano do Ensino Médio</option>
+                            <option value="2ano_ensino_medio">2º Ano do Ensino Médio</option>
+                            <option value="3ano_ensino_medio">3º Ano do Ensino Médio</option>
+                            <option value="eja">EJA (Educação de Jovens e Adultos)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Dados do Responsável</h3>
+                    <div class="form-group">
+                        <label for="nomeResponsavel">Nome Completo do Responsável</label>
+                        <input type="text" id="nomeResponsavel" name="nomeResponsavel" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="parentesco">Parentesco</label>
+                        <input type="text" id="parentesco" name="parentesco" placeholder="Ex: Pai, Mãe, Tio, etc." required />
+                    </div>
+                    <div class="form-group">
+                        <label for="emailResponsavel">Email</label>
+                        <input type="email" id="emailResponsavel" name="emailResponsavel" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneResponsavel">Telefone</label>
+                        <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" placeholder="(XX) XXXXX-XXXX" required />
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Informações Adicionais</h3>
+                    <div class="form-group">
+                        <label for="escolaAnterior">Escola de Origem (Nome completo da última escola)</label>
+                        <input type="text" id="escolaAnterior" name="escolaAnterior" />
+                    </div>
+                    <div class="form-group">
+                        <label for="observacoes">Observações (opcional)</label>
+                        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva qualquer informação adicional relevante para a matrícula."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Enviar Pré-Matrícula</button>
+                </div>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+        document.getElementById('preMatriculaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Simula o envio do formulário
+            const form = event.target;
+            const formMessage = document.getElementById('formMessage');
+
+            // Aqui você faria o envio real dos dados (por exemplo, usando fetch() para um servidor)
+            // Para este exemplo, vamos apenas simular um sucesso
+            setTimeout(() => {
+                form.reset();
+                formMessage.textContent = 'Pré-matrícula enviada com sucesso! Agradecemos o seu interesse e entraremos em contato em breve.';
+                formMessage.classList.add('success');
+                formMessage.style.display = 'block';
+
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                    formMessage.classList.remove('success');
+                }, 8000); // Esconde a mensagem depois de 8 segundos
+            }, 1500); // Atraso de 1.5 segundos para simular o processamento
+        });
+    </script>
+</body>
+</html>
